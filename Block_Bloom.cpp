@@ -5,32 +5,22 @@ using namespace std;
 
 int main()
 {
-    // Create the game window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Block Bloom");
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "Block Bloom");
 
-    // Main game loop
     while (window.isOpen())
     {
-        sf::Event event;
-
-        // Check events
-        while (window.pollEvent(event))
+        while (const std::optional event = window.pollEvent())
         {
-            // Close window button
-            if (event.type == sf::Event::Closed)
+            if (event->is<sf::Event::Closed>())
             {
                 window.close();
             }
         }
 
-        // Clear window with black color
-        window.clear();
+        window.clear(sf::Color::Black);
 
-        // Display everything
         window.display();
     }
 
     return 0;
 }
-
- 
