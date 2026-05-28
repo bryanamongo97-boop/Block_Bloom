@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sfml/Graphics.hpp>
 #include <vector>
 
 /*andandkanfkjzsbfjabsjfba,msc kjzbkjcKJSfjBC<SgzYJCbkZBcsjavskcnas
